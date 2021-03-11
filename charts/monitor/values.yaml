@@ -1,0 +1,8 @@
+instances:
+- app_name: pvc-monitor
+  source_context_dir: app/
+  source_ref: master
+  source_url: https://git.moos.red/kmoos/snow-servicemon.git
+  
+
+scrapeInterval: 10m

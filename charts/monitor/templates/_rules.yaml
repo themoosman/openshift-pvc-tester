@@ -1,0 +1,16 @@
+{{- define "exporters.rules" }}
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ .app_name }}-rules
+spec:
+  groups:
+  - name: {{ .app_name }}-rules
+    rules:
+    - alert: {{ .app_name }} Status
+      expr: pvc_status{job="{{ .app_name }}"} < 1.0
+      for: 5m
+      labels:
+        severity: warning
+{{- end }}
