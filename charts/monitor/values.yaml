@@ -2,7 +2,7 @@ instances:
 - app_name: pvc-monitor
   source_context_dir: app/
   source_ref: master
-  source_url: https://git.moos.red/kmoos/snow-servicemon.git
+  source_url: https://github.com/themoosman/openshift-pvc-tester.git
   
 
 scrapeInterval: 10m
