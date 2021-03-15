@@ -23,7 +23,7 @@ To build and deploy the application a Helm chart is provided.  The Helm charts c
 ### Install
 ```
 #Create the namespace
-oc create namesapce pvc-tester
+oc create namespace pvc-tester
 
 #To deploy the build and deployment components
 helm upgrade --install monitors charts/monitor/ --namespace pvc-tester
