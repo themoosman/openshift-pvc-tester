@@ -3,6 +3,9 @@ instances:
   source_context_dir: app/
   source_ref: master
   source_url: https://github.com/themoosman/openshift-pvc-tester.git
+  #extraEnv:
+  #  - name: PIP_INDEX_URL
+  #    value: https://my-python-mirror.foo.bar
   
 
 scrapeInterval: 10m

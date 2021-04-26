@@ -21,11 +21,15 @@ spec:
       uri: {{ .source_url }}
     type: Git
   strategy:
+    type: Source
     sourceStrategy:
       from:
         kind: DockerImage
         name: registry.access.redhat.com/ubi8/python-38
-    type: Source
+      env:
+{{- if .extraEnv }}
+{{ toYaml .extraEnv | indent 8 }}
+{{- end }}
   successfulBuildsHistoryLimit: 5
   triggers:
   - github:
